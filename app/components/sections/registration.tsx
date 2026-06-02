@@ -18,6 +18,8 @@ export default function Registration() {
     fullName: "",
     email: "",
     institution: "",
+    phone: "",
+    position: "",
     role: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -159,6 +161,34 @@ export default function Registration() {
                   </div>
                 </div>
 
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-xs text-gray-500 tracking-wide">
+                      Phone Number 
+                    </label>
+                    <input
+                      name="phone"
+                      value={form.phone}
+                      onChange={handleChange}
+                      placeholder="+234 800 000 0000"
+                      className="w-full px-4 py-3 rounded-sm text-sm bg-[#f9f8f5] border border-gray-200 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:border-[#2d6a4f]/50 focus:ring-1 focus:ring-[#2d6a4f]/20 transition-all"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-xs text-gray-500 tracking-wide">
+                      Position
+                    </label>
+                    <input
+                      name="position"
+                      type="position"
+                      value={form.position}
+                      onChange={handleChange}
+                      placeholder="Head teacher"
+                      className="w-full px-4 py-3 rounded-sm text-sm bg-[#f9f8f5] border border-gray-200 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:border-[#2d6a4f]/50 focus:ring-1 focus:ring-[#2d6a4f]/20 transition-all"
+                    />
+                  </div>
+                </div>
+
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs text-gray-500 tracking-wide">
                     Institution / School Name
@@ -174,11 +204,11 @@ export default function Registration() {
 
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs text-gray-500 tracking-wide">
-                    Current Role
+                    Country{" "}
                   </label>
                   <CountryDropdown
                     placeholder="Select country"
-                    defaultValue="USA"
+                    defaultValue="NGA"
                     onChange={() => void 0}
                   />
                 </div>
@@ -187,7 +217,7 @@ export default function Registration() {
                   onClick={handleSubmit}
                   className="w-full py-4 rounded-sm text-xs font-semibold tracking-[0.15em] uppercase bg-[#0d2820] text-white hover:bg-[#1a3a2e] transition-all duration-300 mt-1"
                 >
-                  Complete Registration
+                  Secure my Seat
                 </button>
 
                 <div className="flex items-center justify-center gap-2 -mt-2">
