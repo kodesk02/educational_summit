@@ -1,0 +1,207 @@
+"use client";
+
+import { useState } from "react";
+import { Lock } from "lucide-react";
+import { CountryDropdown } from "../ui/country_dropdown";
+
+const roleOptions = [
+  { value: "", label: "School Owner / CEO" },
+  { value: "director", label: "Director" },
+  { value: "principal", label: "Principal" },
+  { value: "edtech", label: "EdTech Founder" },
+  { value: "policy", label: "Policy Maker" },
+  { value: "consultant", label: "Education Consultant" },
+];
+
+export default function Registration() {
+  const [form, setForm] = useState({
+    fullName: "",
+    email: "",
+    institution: "",
+    role: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (form.fullName && form.email) setSubmitted(true);
+  };
+
+  return (
+    <section id="register" className="relative py-24 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="grid md:grid-cols-[280px_1fr] gap-0 rounded-sm overflow-hidden shadow-xl">
+          {/* Left: Event Brief */}
+          <div
+            className="p-8 flex flex-col gap-6"
+            style={{
+              background: "linear-gradient(160deg, #2c4a52 0%, #091510 100%)",
+              borderRight: "1px solid rgba(45,106,79,0.3)",
+            }}
+          >
+            <h3
+              className="font-display text-base font-semibold text-summit-text"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Event Brief
+            </h3>
+
+            <div className="flex flex-col gap-4">
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.18em] text-summit-muted mb-1">
+                  Dates
+                </p>
+                <p className="text-summit-text text-sm font-medium">
+                  18th — 20th June 2026
+                </p>
+              </div>
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.18em] text-summit-muted mb-1">
+                  Venue
+                </p>
+                <p className="text-summit-text text-sm font-medium">
+                  Online · Global Virtual Access
+                </p>
+              </div>
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.18em] text-summit-muted mb-1">
+                  Payment Info.
+                </p>
+                <p className="text-summit-text text-sm font-medium">
+                  1234456789
+                </p>
+                <p className="text-summit-text text-xs font-medium">
+                  Access Bank
+                </p>
+              </div>
+            </div>
+
+            {/* Quote */}
+            <div className="mt-auto pt-6 border-t border-summit-border/40">
+              <p
+                className="text-summit-muted text-xs leading-relaxed italic"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                &ldquo;Education is the most powerful weapon which you can use
+                to change the world.&rdquo;
+              </p>
+            </div>
+          </div>
+
+          {/* Right: Form */}
+          <div className="bg-white border p-8 flex flex-col gap-6">
+            <h3
+              className="font-display text-lg font-semibold text-[#1a2e24]"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Claim Your Seat
+            </h3>
+
+            {submitted ? (
+              <div className="flex flex-col items-center justify-center gap-4 py-10 text-center">
+                <div className="w-12 h-12 rounded-full bg-[#2d6a4f]/10 flex items-center justify-center">
+                  <svg
+                    className="w-6 h-6 text-[#2d6a4f]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-[#1a2e24] font-semibold text-sm">
+                    Registration Received!
+                  </p>
+                  <p className="text-gray-500 text-xs mt-1">
+                    We&apos;ll send your access link to {form.email}
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-xs text-gray-500 tracking-wide">
+                      Full Name
+                    </label>
+                    <input
+                      name="fullName"
+                      value={form.fullName}
+                      onChange={handleChange}
+                      placeholder="Enter your full name"
+                      className="w-full px-4 py-3 rounded-sm text-sm bg-[#f9f8f5] border border-gray-200 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:border-[#2d6a4f]/50 focus:ring-1 focus:ring-[#2d6a4f]/20 transition-all"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-xs text-gray-500 tracking-wide">
+                      Professional Email
+                    </label>
+                    <input
+                      name="email"
+                      type="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="email@institution.com"
+                      className="w-full px-4 py-3 rounded-sm text-sm bg-[#f9f8f5] border border-gray-200 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:border-[#2d6a4f]/50 focus:ring-1 focus:ring-[#2d6a4f]/20 transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs text-gray-500 tracking-wide">
+                    Institution / School Name
+                  </label>
+                  <input
+                    name="institution"
+                    value={form.institution}
+                    onChange={handleChange}
+                    placeholder="Name of your organization"
+                    className="w-full px-4 py-3 rounded-sm text-sm bg-[#f9f8f5] border border-gray-200 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:border-[#2d6a4f]/50 focus:ring-1 focus:ring-[#2d6a4f]/20 transition-all"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs text-gray-500 tracking-wide">
+                    Current Role
+                  </label>
+                  <CountryDropdown
+                    placeholder="Select country"
+                    defaultValue="USA"
+                    onChange={() => void 0}
+                  />
+                </div>
+
+                <button
+                  onClick={handleSubmit}
+                  className="w-full py-4 rounded-sm text-xs font-semibold tracking-[0.15em] uppercase bg-[#0d2820] text-white hover:bg-[#1a3a2e] transition-all duration-300 mt-1"
+                >
+                  Complete Registration
+                </button>
+
+                <div className="flex items-center justify-center gap-2 -mt-2">
+                  <Lock size={11} className="text-gray-400" />
+                  <p className="text-gray-400 text-[10px] text-center">
+                    Secure payment processing &amp; simulated access link upon
+                    confirmation
+                  </p>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
