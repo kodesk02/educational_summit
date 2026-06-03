@@ -23,7 +23,7 @@ export default function SectionHeading({
   return (
     <div className={`flex flex-col gap-3 ${alignClass}`}>
       {label && (
-        <span className="text-xs font-mono tracking-[0.2em] uppercase text-summit-gold">
+        <span className="text-xs font-mono tracking-[0.2em] uppercase text-white">
           {label}
         </span>
       )}
@@ -36,7 +36,7 @@ export default function SectionHeading({
         {title}
       </h2>
       {subtitle && (
-        <p className="text-summit-muted text-sm md:text-base max-w-xl leading-relaxed">
+        <p className="text-white text-sm md:text-base max-w-xl leading-relaxed">
           {subtitle}
         </p>
       )}

@@ -16,7 +16,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   primary:
     "bg-summit-accent text-white border border-summit-accent hover:bg-transparent hover:text-summit-accent transition-all duration-300",
   outline:
-    "bg-transparent text-summit-text border border-summit-border hover:border-summit-gold hover:text-summit-gold transition-all duration-300",
+    "bg-transparent text-summit-text border border-summit-border hover:border-white hover:text-white transition-all duration-300",
   ghost:
     "bg-white text-[#2c4a52] hover:text-summit-text transition-all duration-300",
   gold:
@@ -33,7 +33,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-sm text-sm font-medium tracking-wide cursor-pointer focus:outline-none focus:ring-2 focus:ring-summit-gold/40";
+    "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-sm text-sm font-medium tracking-wide cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/40";
   const classes = `${base} ${variantStyles[variant]} ${fullWidth ? "w-full" : ""} ${className}`;
 
   if (href) {

@@ -65,8 +65,8 @@ export default function StrategicTransformation() {
             }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <CheckCircle2 size={18} className="text-summit-gold" />
-              <span className="text-xs font-mono uppercase tracking-[0.18em] text-summit-gold">
+              <CheckCircle2 size={18} className="text-white" />
+              <span className="text-xs font-mono uppercase tracking-[0.18em] text-white">
                 Summit Outcomes
               </span>
             </div>
@@ -77,7 +77,7 @@ export default function StrategicTransformation() {
                     size={15}
                     className="text-[#2d6a4f] mt-0.5 shrink-0"
                   />
-                  <p className="text-summit-muted text-sm leading-relaxed">
+                  <p className="text-white text-sm leading-relaxed">
                     {item}
                   </p>
                 </li>

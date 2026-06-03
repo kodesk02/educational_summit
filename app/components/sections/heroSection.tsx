@@ -48,7 +48,7 @@ export default function Hero() {
           {/* Headline */}
           <div className="flex flex-col gap-3">
             <h1
-              className="font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.1]"
+              className="font-bold text-4xl text-white md:text-5xl lg:text-6xl leading-[1.1]"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Education CEOs{" "}

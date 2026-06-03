@@ -48,7 +48,7 @@ export default function Registration() {
             }}
           >
             <h3
-              className="font-display text-base font-semibold text-summit-text"
+              className="font-display text-base font-semibold text-white"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Event Brief
@@ -56,29 +56,29 @@ export default function Registration() {
 
             <div className="flex flex-col gap-4">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.18em] text-summit-muted mb-1">
+                <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">
                   Dates
                 </p>
-                <p className="text-summit-text text-sm font-medium">
+                <p className="text-white text-sm font-medium">
                   18th — 20th June 2026
                 </p>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.18em] text-summit-muted mb-1">
+                <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">
                   Venue
                 </p>
-                <p className="text-summit-text text-sm font-medium">
+                <p className="text-white text-sm font-medium">
                   Online · Global Virtual Access
                 </p>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.18em] text-summit-muted mb-1">
+                <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">
                   Payment Info.
                 </p>
-                <p className="text-summit-text text-sm font-medium">
+                <p className="text-white text-sm font-medium">
                   1234456789
                 </p>
-                <p className="text-summit-text text-xs font-medium">
+                <p className="text-white text-xs font-medium">
                   Access Bank
                 </p>
               </div>
@@ -87,7 +87,7 @@ export default function Registration() {
             {/* Quote */}
             <div className="mt-auto pt-6 border-t border-summit-border/40">
               <p
-                className="text-summit-muted text-xs leading-relaxed italic"
+                className="text-gray-400 text-xs leading-relaxed italic"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 &ldquo;Education is the most powerful weapon which you can use

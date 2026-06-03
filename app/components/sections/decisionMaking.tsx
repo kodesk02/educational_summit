@@ -44,7 +44,7 @@ export default function ForDecisionMakers() {
           {roles.map((role) => (
             <span
               key={role}
-              className="px-5 py-2.5 text-xs font-medium tracking-wide bg-white/10 border border-white/20 rounded-md backdrop-blur-sm hover:border-summit-gold/40 hover:text-summit-gold transition-all duration-300 cursor-default"
+              className="px-5 py-2.5 text-xs font-medium tracking-wide bg-white/10 border border-white/20 rounded-md backdrop-blur-sm hover:border-white/40 text-white transition-all duration-300 cursor-default"
             >
               {role}
             </span>

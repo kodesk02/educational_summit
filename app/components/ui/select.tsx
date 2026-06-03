@@ -23,7 +23,7 @@ export default function Select({
           w-full px-4 py-3 rounded-sm text-sm
           bg-[#0d1f1a] border border-summit-border
           text-summit-text
-          focus:outline-none focus:border-summit-gold/50 focus:ring-1 focus:ring-summit-gold/20
+          focus:outline-none focus:border-white/50 focus:ring-1 focus:ring-white/20
           transition-all duration-200 cursor-pointer
           ${className}
         `}

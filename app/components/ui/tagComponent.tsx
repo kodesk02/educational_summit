@@ -6,7 +6,7 @@ interface BadgeProps {
 
 const variantStyles = {
   default: "bg-summit-card border border-summit-border text-summit-muted",
-  gold: "bg-summit-gold/10 border border-summit-gold/40 text-summit-gold",
+  gold: "bg-white/10 border border-white/40 text-white",
   green: "bg-summit-accent/20 border border-summit-accent/40 text-summit-text",
   outline: "bg-transparent border border-summit-border text-summit-text",
 };

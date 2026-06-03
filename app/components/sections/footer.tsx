@@ -18,12 +18,12 @@ export default function Footer() {
           {/* Left */}
           <div className="flex flex-col gap-3">
             <h4
-              className="font-display text-sm font-semibold text-summit-text"
+              className="font-display text-sm font-semibold text-white"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Education CEOs Summit Africa 2026
             </h4>
-            <p className="text-summit-muted text-xs leading-relaxed max-w-xs">
+            <p className="text-white text-xs leading-relaxed max-w-xs">
               Empowering the architects of Africa&apos;s future through financial
               literacy and innovative educational leadership.
             </p>
@@ -35,7 +35,7 @@ export default function Footer() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-xs text-summit-muted hover:text-summit-gold transition-colors duration-200 tracking-wide"
+                className="text-xs text-white hover:text-white transition-colors duration-200 tracking-wide"
               >
                 {link.label}
               </a>
@@ -45,12 +45,12 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-summit-border/20 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-summit-muted/50 text-[11px]">
+          <p className="text-white/50 text-[11px]">
             © 2026 Education CEOs Summit Africa. All rights reserved.
           </p>
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-summit-accent animate-pulse-slow" />
-            <span className="text-summit-muted/50 text-[11px]">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse-slow" />
+            <span className="text-white/50 text-[11px]">
               Registrations open
             </span>
           </div>

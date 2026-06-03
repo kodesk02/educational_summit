@@ -80,7 +80,7 @@ export default function AfricaTicker() {
               className="flex items-center gap-2.5 px-8 py-3.5 bg-[#2c4a52] transition-colors cursor-default"
             >
               <span className="text-xl leading-none">{c.flag}</span>
-              <span className="text-xs text-summit-muted hover:text-summit-text transition-colors">
+              <span className="text-xs text-white hover:text-summit-text transition-colors">
                 {c.name}
               </span>
             </div>

@@ -28,7 +28,7 @@ function TimeUnit({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex flex-col items-center min-w-[48px] py-1.5">
       <span
-        className="text-2xl font-display font-bold text-summit-gold leading-none tabular-nums"
+        className="text-2xl font-display font-bold text-white leading-none tabular-nums"
         style={{ fontFamily: "var(--font-playfair)" }}
       >
         {String(value).padStart(2, "0")}
@@ -59,12 +59,12 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
   ];
 
   return (
-    <div className="flex items-center bg-white/10 border border-white/20 rounded-md backdrop-blur-sm gap-1">
+    <div className="flex items-center text-white  bg-white/10 border border-white/20 rounded-md backdrop-blur-sm gap-1">
       {units.map((unit, i) => (
         <div key={unit.label} className="flex items-center gap-4">
           <TimeUnit value={unit.value} label={unit.label} />
           {i < units.length - 1 && (
-            <span className="text-summit-gold/40 text-lg font-light pb-4">:</span>
+            <span className="text-lg font-light pb-4">:</span>
           )}
         </div>
       ))}

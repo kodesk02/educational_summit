@@ -21,7 +21,7 @@ export default function Card({
           ? "bg-summit-green border-summit-accent/60"
           : "bg-summit-card border-summit-border"
         }
-        ${hover ? "hover:border-summit-gold/40 transition-all duration-300" : ""}
+        ${hover ? "hover:border-white/40 transition-all duration-300" : ""}
         ${className}
       `}
     >

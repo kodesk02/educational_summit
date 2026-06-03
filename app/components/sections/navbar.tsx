@@ -76,7 +76,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-summit-muted hover:text-summit-gold transition-colors"
+              className="text-sm text-summit-muted hover:text-white transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
