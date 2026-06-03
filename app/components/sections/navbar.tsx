@@ -8,7 +8,6 @@ import Button from "../ui/button";
 const navLinks = [
   { label: "Agenda", href: "#agenda" },
   { label: "Speakers", href: "#speakers" },
-  { label: "Venue", href: "#venue" },
 ];
 
 export default function Navbar() {
