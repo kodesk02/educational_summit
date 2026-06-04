@@ -13,7 +13,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/images/1.jpg')",
+          backgroundImage: "url('/images/1.png')",
         }}
       />
 
@@ -24,7 +24,7 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(135deg, rgba(44,74,82,0.95) 100%, rgba(44,74,82,0.85) 100%, rgba(44,74,82,0.75) 100%)",
+            "linear-gradient(to right, rgba(1,24,58,0.95) 20%, rgba(1,24,58,0.65) 50%, rgba(1,24,58,0.5) 100%)",
         }}
       />
 
@@ -38,9 +38,9 @@ export default function Hero() {
         {/* Left content */}
         <div className="flex flex-col gap-7">
           {/* Label pill */}
-          <div className="inline-flex items-center gap-2 bg-[#c8a96e]/20 border border-[#c8a96e]/30 rounded-lg px-4 py-2 self-start">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#c8a96e]" />
-            <span className="text-xs font-mono tracking-[0.2em] uppercase text-[#c8a96e]">
+          <div className="inline-flex items-center gap-2 bg-[#cc9f39]/20 border border-[#cc9f39]/30 rounded-lg px-4 py-2 self-start">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#cc9f39]" />
+            <span className="text-xs font-mono tracking-[0.2em] uppercase text-[#cc9f39]">
               Pioneer Leadership 2026
             </span>
           </div>
@@ -52,7 +52,7 @@ export default function Hero() {
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Education CEOs{" "}
-              <span className="text-[#c8a96e]">Summit Africa</span> 2026
+              <span className="text-[#cc9f39]">Summit Africa</span> 2026
             </h1>
 
             <p className="text-[#e8e0d0]/80 text-sm md:text-base leading-relaxed max-w-md">
@@ -80,7 +80,7 @@ export default function Hero() {
               (item) => (
                 <span
                   key={item}
-                  className="text-xs text-[#c8a96e] bg-[#c8a96e]/20 border border-[#c8a96e]/30 rounded-lg px-3 py-1.5 tracking-wide"
+                  className="text-xs text-[#cc9f39] bg-[#cc9f39]/20 border border-[#cc9f39]/30 rounded-lg px-3 py-1.5 tracking-wide"
                 >
                   {item}
                 </span>
@@ -100,41 +100,6 @@ export default function Hero() {
               }}
             />
 
-            <div className="relative bg-[#0d2820] border border-white/10 rounded-lg overflow-hidden aspect-[4/3] flex items-end justify-center">
-              <div className="absolute inset-0 flex flex-col items-center justify-center pb-6">
-                <div className="flex gap-10 mb-6">
-                  {[...Array(3)].map((_, i) => (
-                    <div key={i} className="flex flex-col items-center">
-                      <div className="w-1 h-8 bg-[#c8a96e]/30 rounded-full" />
-                      <div
-                        className="w-8 h-16 mt-1"
-                        style={{
-                          background:
-                            "linear-gradient(180deg, rgba(200,169,110,0.3) 0%, transparent 100%)",
-                          clipPath:
-                            "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)",
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-16 bg-gradient-to-b from-[#1a3a2e] to-[#0d2820] border border-white/10 rounded-sm" />
-                  <div className="w-20 h-3 bg-[#2d6a4f]/60 rounded-sm -mt-1" />
-                  <div className="w-28 h-2 bg-[#2d6a4f]/40 rounded-sm mt-0.5" />
-                </div>
-              </div>
-
-              <div className="relative z-10 w-full bg-gradient-to-t from-[#091510]/80 to-transparent p-5">
-                <p
-                  className="text-sm text-[#c8a96e] text-center"
-                  style={{ fontFamily: "var(--font-playfair)" }}
-                >
-                  Powering Leadership. Shaping the Future.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

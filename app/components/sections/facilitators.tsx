@@ -16,10 +16,10 @@ export default function Facilitator() {
           <div className="relative">
             <div className="relative w-full max-w-xs">
               {/* Gold accent border */}
-              <div className="absolute -top-4 -left-4 w-full h-full border border-[#c8a96e]/30 rounded-sm pointer-events-none" />
+              <div className="absolute -top-4 -left-4 w-full h-full border border-[#cc9f39]/30 rounded-sm pointer-events-none" />
 
               {/* Photo placeholder */}
-              <div className="relative bg-gradient-to-b from-[#1a3a2e] to-[#2c4a52] rounded-sm overflow-hidden aspect-3/4">
+              <div className="relative bg-gradient-to-b from-[#1a3a2e] to-[#01183A] rounded-sm overflow-hidden aspect-3/4">
                 {/* Silhouette placeholder */}
                 <Image
                   src="/images/person.png"
@@ -31,15 +31,15 @@ export default function Facilitator() {
 
                 {/* <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex flex-col items-center gap-2 opacity-20">
-                    <div className="w-20 h-20 rounded-full bg-[#c8a96e]" />
-                    <div className="w-32 h-40 rounded-t-full bg-[#c8a96e]" />
+                    <div className="w-20 h-20 rounded-full bg-[#cc9f39]" />
+                    <div className="w-32 h-40 rounded-t-full bg-[#cc9f39]" />
                   </div>
                 </div> */}
 
                 {/* Name card overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm px-5 py-4">
                   <p
-                    className="text-[#2c4a52] text-sm font-semibold"
+                    className="text-[#01183A] text-sm font-semibold"
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
                     Caleb T. Epivays
@@ -68,7 +68,7 @@ export default function Facilitator() {
                 <div key={stat.label} className="w-full">
                   <div className="flex items-center gap-6">
                     <span
-                      className="font-display text-2xl font-bold text-[#2c4a52]"
+                      className="font-display text-2xl font-bold text-[#01183A]"
                       style={{ fontFamily: "var(--font-playfair)" }}
                     >
                       {stat.value}

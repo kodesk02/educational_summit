@@ -24,7 +24,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 lg:px-0 px-4 transition-all duration-500 ${
         scrolled
-          ? "lg:bg-[#2c4a52] bg-white backdrop-blur-sm border-b border-summit-border/40 py-3"
+          ? "lg:bg-[#01183A] bg-white backdrop-blur-sm border-b border-summit-border/40 py-3"
           : "bg-white pt-3 py-0 lg:py-3"
       }`}
     >
@@ -32,7 +32,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className={`font-display text-sm lg:text-lg font-semibold py-3 tracking-wide ${scrolled ? "text-[#2c4a52] lg:text-white" : "text-[#2c4a52]"}`}
+          className={`font-display text-sm lg:text-lg font-semibold py-3 tracking-wide ${scrolled ? "text-[#01183A] lg:text-white" : "text-[#01183A]"}`}
           style={{ fontFamily: "var(--font-playfair)" }}
         >
           Education CEOs Summit Africa 2026
@@ -44,7 +44,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className={`text-xs tracking-widest uppercase transition-colors duration-200 ${scrolled ? "text-white hover:text-[#8e9775]" : "text-[#2c4a52] hover:text-[#8e9775]"}`}
+              className={`text-xs tracking-widest uppercase transition-colors duration-200 ${scrolled ? "text-white hover:text-[#8e9775]" : "text-[#01183A] hover:text-[#8e9775]"}`}
             >
               {link.label}
             </a>
@@ -60,7 +60,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-[#2c4a52] hover:text-[#8e9775]"
+          className="md:hidden text-[#01183A] hover:text-[#8e9775]"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -70,12 +70,12 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#2c4a52] border-t border-summit-border/40 px-6 py-6 flex flex-col gap-5">
+        <div className="md:hidden bg-[#01183A] border-t border-summit-border/40 px-6 py-6 flex flex-col gap-5">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-summit-muted hover:text-white transition-colors"
+              className="text-sm text-white hover:text-white transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               {link.label}

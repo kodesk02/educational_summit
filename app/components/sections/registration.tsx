@@ -4,14 +4,20 @@ import { useState } from "react";
 import { Lock } from "lucide-react";
 import { CountryDropdown } from "../ui/country_dropdown";
 
-const roleOptions = [
-  { value: "", label: "School Owner / CEO" },
-  { value: "director", label: "Director" },
-  { value: "principal", label: "Principal" },
-  { value: "edtech", label: "EdTech Founder" },
-  { value: "policy", label: "Policy Maker" },
-  { value: "consultant", label: "Education Consultant" },
+const hearAboutOptions = [
+  { value: "WhatsApp Messenger" },
+  { value: "Instagram" },
+  { value: "Facebook" },
+  { value: "Twitter / X" },
+  { value: "LinkedIn" },
+  { value: "Email Newsletter" },
+  { value: "Google Search" },
+  { value: "Friend / Colleague" },
+  { value: "Other" },
 ];
+
+const FORM_ACTION =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfrMP65WF_Jz9kK4GeMNOpDxh-1MavAUNPxro1YBIZc32liQA/formResponse";
 
 export default function Registration() {
   const [form, setForm] = useState({
@@ -20,7 +26,8 @@ export default function Registration() {
     institution: "",
     phone: "",
     position: "",
-    role: "",
+    country: "Nigeria",
+    hearAbout: "",
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -32,7 +39,24 @@ export default function Registration() {
 
   const handleSubmit = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (form.fullName && form.email) setSubmitted(true);
+    if (!form.fullName || !form.email) return;
+
+    const params = new URLSearchParams({
+      "entry.191638175": form.fullName,
+      "entry.320162868": form.email,
+      "entry.724159003": form.institution,
+      "entry.543450719": form.phone,
+      "entry.229453005": form.position,
+      "entry.1255953392": form.country,
+      "entry.1656985034": form.hearAbout,
+    });
+
+    fetch(`${FORM_ACTION}?${params.toString()}`, {
+      method: "POST",
+      mode: "no-cors",
+    });
+
+    setSubmitted(true);
   };
 
   return (
@@ -43,7 +67,7 @@ export default function Registration() {
           <div
             className="p-8 flex flex-col gap-6"
             style={{
-              background: "linear-gradient(160deg, #2c4a52 0%, #091510 100%)",
+              background: "linear-gradient(160deg, #062b62 0%, #01183A 100%)",
               borderRight: "1px solid rgba(45,106,79,0.3)",
             }}
           >
@@ -75,16 +99,11 @@ export default function Registration() {
                 <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">
                   Payment Info.
                 </p>
-                <p className="text-white text-sm font-medium">
-                  1234456789
-                </p>
-                <p className="text-white text-xs font-medium">
-                  Access Bank
-                </p>
+                <p className="text-white text-sm font-medium">1234456789</p>
+                <p className="text-white text-xs font-medium">Access Bank</p>
               </div>
             </div>
 
-            {/* Quote */}
             <div className="mt-auto pt-6 border-t border-summit-border/40">
               <p
                 className="text-gray-400 text-xs leading-relaxed italic"
@@ -127,7 +146,7 @@ export default function Registration() {
                     Registration Received!
                   </p>
                   <p className="text-gray-500 text-xs mt-1">
-                    We&apos;ll send your access link to {form.email}
+                    We&apos;ll contact you at {form.email}
                   </p>
                 </div>
               </div>
@@ -164,7 +183,7 @@ export default function Registration() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
                     <label className="text-xs text-gray-500 tracking-wide">
-                      Phone Number 
+                      Phone Number
                     </label>
                     <input
                       name="phone"
@@ -180,7 +199,6 @@ export default function Registration() {
                     </label>
                     <input
                       name="position"
-                      type="position"
                       value={form.position}
                       onChange={handleChange}
                       placeholder="Head teacher"
@@ -202,20 +220,44 @@ export default function Registration() {
                   />
                 </div>
 
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs text-gray-500 tracking-wide">
-                    Country{" "}
-                  </label>
-                  <CountryDropdown
-                    placeholder="Select country"
-                    defaultValue="NGA"
-                    onChange={() => void 0}
-                  />
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-xs text-gray-500 tracking-wide">
+                      Country
+                    </label>
+                    <CountryDropdown
+                      placeholder="Select country"
+                      defaultValue="NGA"
+                      onChange={(val) =>
+                        setForm((prev) => ({ ...prev, country: val }))
+                      }
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-xs text-gray-500 tracking-wide">
+                      How did you hear about us?
+                    </label>
+                    <select
+                      name="hearAbout"
+                      value={form.hearAbout}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-sm text-sm bg-[#f9f8f5] border border-gray-200 text-gray-800 focus:outline-none focus:border-[#2d6a4f]/50 focus:ring-1 focus:ring-[#2d6a4f]/20 transition-all appearance-none"
+                    >
+                      <option value="" disabled>
+                        Select an option
+                      </option>
+                      {hearAboutOptions.map((opt) => (
+                        <option key={opt.value} value={opt.value}>
+                          {opt.value}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
 
                 <button
                   onClick={handleSubmit}
-                  className="w-full py-4 rounded-sm text-xs font-semibold tracking-[0.15em] uppercase bg-[#0d2820] text-white hover:bg-[#1a3a2e] transition-all duration-300 mt-1"
+                  className="w-full py-4 rounded-sm text-xs font-semibold tracking-[0.15em] uppercase bg-[#01183A] text-white hover:bg-[#062b62] transition-all duration-300 mt-1"
                 >
                   Secure my Seat
                 </button>

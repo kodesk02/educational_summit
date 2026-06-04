@@ -14,7 +14,7 @@ const config: Config = {
           darker: "#091510",
           green: "#1a3a2e",
           olive: "#4a5c2e",
-          gold: "#c8a96e",
+          gold: "#cc9f39",
           "gold-light": "#e8c98e",
           accent: "#2d6a4f",
           text: "#e8e0d0",
@@ -34,7 +34,7 @@ const config: Config = {
         "card-gradient":
           "linear-gradient(145deg, #132820 0%, #0d1f1a 100%)",
         "gold-gradient":
-          "linear-gradient(90deg, #c8a96e 0%, #e8c98e 50%, #c8a96e 100%)",
+          "linear-gradient(90deg, #cc9f39 0%, #e8c98e 50%, #cc9f39 100%)",
         "dark-gradient":
           "linear-gradient(180deg, #091510 0%, #0d1f1a 100%)",
       },

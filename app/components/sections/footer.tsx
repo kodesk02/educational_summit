@@ -10,7 +10,7 @@ export default function Footer() {
     <footer
       className="relative py-12 border-t border-summit-border/30"
       style={{
-        background: "linear-gradient(180deg, #0d1f1a 0%, #091510 100%)",
+        background: "linear-gradient(360deg, #062b62 0%, #01183A 100%)",
       }}
     >
       <div className="max-w-6xl mx-auto px-6">

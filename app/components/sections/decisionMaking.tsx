@@ -17,7 +17,7 @@ export default function ForDecisionMakers() {
   return (
     <section
       id="decision-makers"
-      className="relative py-24 overflow-hidden bg-[#2c4a52]"
+      className="relative py-24 overflow-hidden bg-[#01183A]"
     >
       {/* Subtle grid pattern */}
       <div

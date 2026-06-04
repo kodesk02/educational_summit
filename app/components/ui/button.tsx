@@ -18,9 +18,9 @@ const variantStyles: Record<ButtonVariant, string> = {
   outline:
     "bg-transparent text-summit-text border border-summit-border hover:border-white hover:text-white transition-all duration-300",
   ghost:
-    "bg-white text-[#2c4a52] hover:text-summit-text transition-all duration-300",
+    "bg-white text-[#01183A] hover:text-summit-text transition-all duration-300",
   gold:
-    "bg-gradient-to-r from-[#2c4a52] to-[#2c4a52] text-[#fff] font-semibold hover:opacity-90 transition-all duration-300",
+    "bg-gradient-to-r from-[#01183A] to-[#01183A] text-[#fff] font-semibold hover:opacity-90 transition-all duration-300",
 };
 
 export default function Button({

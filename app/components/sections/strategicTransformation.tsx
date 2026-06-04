@@ -60,7 +60,7 @@ export default function StrategicTransformation() {
           <div
             className="rounded-sm p-8"
             style={{
-              background: "linear-gradient(145deg, #2c4a52 40%, #091510 100%)",
+              background: "linear-gradient(145deg, #01183A 40%, #091510 100%)",
               border: "1px solid rgba(45,106,79,0.4)",
             }}
           >

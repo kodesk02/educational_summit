@@ -80,7 +80,7 @@ const CountryDropdownComponent = (
   );
 
   const triggerClasses = cn(
-    "flex h-10 w-full px-4 py-3 text-gray-800 rounded-sm bg-[#f9f8f5] items-center justify-between whitespace-nowrap border border-gray-200 text-sm shadow-sm ring-offset-background placeholder:text-gray-400 focus:outline-none focus:border-[#2d6a4f]/50 focus:ring-[#2d6a4f]/20 transition-all focus:ring-1 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+    "flex h-11.5 w-full px-4 py-3 text-gray-800 rounded-sm bg-[#f9f8f5] items-center justify-between whitespace-nowrap border border-gray-200 text-sm shadow-sm ring-offset-background placeholder:text-gray-400 focus:outline-none focus:border-[#2d6a4f]/50 focus:ring-[#2d6a4f]/20 transition-all focus:ring-1 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
     slim && "w-20",
   );
 
@@ -139,7 +139,7 @@ const CountryDropdownComponent = (
                           height={20}
                         />
                       </div>
-                      <span className="overflow-hidden text-[#2c4a52] whitespace-nowrap">
+                      <span className="overflow-hidden text-[#01183A] whitespace-nowrap">
                         {option.name}
                       </span>
                     </div>

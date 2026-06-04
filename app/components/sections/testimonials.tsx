@@ -17,7 +17,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24" style={{ background: "#2c4a52" }}>
+    <section className="py-24" style={{ background: "#01183A" }}>
       <div className="max-w-5xl mx-auto px-6">
         {/* Heading */}
         <div className="flex flex-col items-center gap-3 mb-14">
@@ -27,7 +27,7 @@ export default function Testimonials() {
           >
             Voices of Transformation
           </h2>
-          <div className="border-2 w-1/4 rounded-2xl border-[#c8a96e]/70 " />
+          <div className="border-2 w-1/4 rounded-2xl border-[#cc9f39]/70 " />
         </div>
 
         {/* Cards */}
@@ -61,7 +61,7 @@ export default function Testimonials() {
                 {/* Avatar */}
                 <div
                   className="w-11 h-11 rounded-lg flex items-center justify-center text-white text-xs font-semibold shrink-0"
-                  style={{ background: "#2c4a52" }}
+                  style={{ background: "#01183A" }}
                 >
                   {t.initials}
                 </div>

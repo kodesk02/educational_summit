@@ -22,7 +22,7 @@ export default function WhyAttend() {
             title="Why Attend the Summit?"
             light={false}
           />
-          <div className="border-2 w-1/4 rounded-r-2xl border-[#c8a96e]/70 "/>
+          <div className="border-2 w-1/4 rounded-r-2xl border-[#cc9f39]/70 "/>
         </div>
 
         {/* Grid layout matching the design */}
@@ -57,10 +57,10 @@ export default function WhyAttend() {
 
           {/* Row 2 */}
           <div
-            className="bg-[#2c4a52] border border-[#4a5c2e] rounded-sm p-6 hover:border-[#c8a96e]/40 transition-all duration-300"
+            className="bg-[#01183A] border border-[#4a5c2e] rounded-sm p-6 hover:border-[#cc9f39]/40 transition-all duration-300"
           >
-            <PieChart size={20} className="text-[#c8a96e] mb-3" />
-            <p className="text-[#c8a96e] text-[10px] uppercase tracking-widest mb-2"> Reducing Financial Leakages
+            <PieChart size={20} className="text-[#cc9f39] mb-3" />
+            <p className="text-[#cc9f39] text-[10px] uppercase tracking-widest mb-2"> Reducing Financial Leakages
 </p>
             <p className="text-[#a0b090] text-xs leading-relaxed">
               Stop financial drain through smart operational audits.
@@ -87,10 +87,10 @@ export default function WhyAttend() {
 
           {/* Row 3 */}
           <div
-            className="bg-[#2c4a52] border border-[#4a5c2e] rounded-sm p-6 hover:border-[#c8a96e]/40 transition-all duration-300 md:col-span-1"
+            className="bg-[#01183A] border border-[#4a5c2e] rounded-sm p-6 hover:border-[#cc9f39]/40 transition-all duration-300 md:col-span-1"
           >
-            <Building2 size={20} className="text-[#c8a96e] mb-3" />
-            <p className="text-[#c8a96e] text-[10px] uppercase tracking-widest mb-2">School Expansion</p>
+            <Building2 size={20} className="text-[#cc9f39] mb-3" />
+            <p className="text-[#cc9f39] text-[10px] uppercase tracking-widest mb-2">School Expansion</p>
             <p className="text-[#a0b090] text-xs leading-relaxed">
               Scalable growth strategies for multi-campus management.
             </p>

@@ -29,7 +29,7 @@ export default function SectionHeading({
       )}
       <h2
         className={`font-display text-3xl md:text-4xl font-700 leading-tight ${
-          light ? "text-white" : "text-[#2c4a52]"
+          light ? "text-white" : "text-[#01183A]"
         }`}
         style={{ fontFamily: "var(--font-playfair)" }}
       >
