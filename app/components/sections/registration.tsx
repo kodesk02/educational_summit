@@ -34,7 +34,7 @@ export default function Registration() {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
     setForm((prev) => ({
       ...prev,
@@ -246,10 +246,12 @@ export default function Registration() {
                       Country
                     </label>
                     <CountryDropdown
-                      placeholder="Select country"
                       defaultValue="NGA"
-                      onChange={(val) =>
-                        setForm((prev) => ({ ...prev, country: val }))
+                      onChange={(country) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          country: country.name,
+                        }))
                       }
                     />
                   </div>
