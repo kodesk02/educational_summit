@@ -29,41 +29,59 @@ export default function Registration() {
     country: "Nigeria",
     hearAbout: "",
   });
+
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setForm((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
-  const handleSubmit = (e: React.MouseEvent) => {
+  const handleSubmit = async (e: React.MouseEvent) => {
     e.preventDefault();
+
     if (!form.fullName || !form.email) return;
 
-    const params = new URLSearchParams({
-      "entry.191638175": form.fullName,
-      "entry.320162868": form.email,
-      "entry.724159003": form.institution,
-      "entry.543450719": form.phone,
-      "entry.229453005": form.position,
-      "entry.1255953392": form.country,
-      "entry.1656985034": form.hearAbout,
-    });
+    try {
+      setLoading(true);
 
-    fetch(`${FORM_ACTION}?${params.toString()}`, {
-      method: "POST",
-      mode: "no-cors",
-    });
+      const body = new URLSearchParams({
+        "entry.191638175": form.fullName,
+        "entry.320162868": form.email,
+        "entry.724159003": form.institution,
+        "entry.543450719": form.phone,
+        "entry.229453005": form.position,
+        "entry.1255953392": form.country,
+        "entry.1656985034": form.hearAbout,
+      });
 
-    setSubmitted(true);
+      await fetch(FORM_ACTION, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: body.toString(),
+      });
+
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Submission failed:", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <section id="register" className="relative py-24 bg-white">
       <div className="max-w-4xl mx-auto px-6">
         <div className="grid md:grid-cols-[280px_1fr] gap-0 rounded-sm overflow-hidden shadow-xl">
-          {/* Left: Event Brief */}
+          {/* LEFT SIDE */}
           <div
             className="p-8 flex flex-col gap-6"
             style={{
@@ -87,6 +105,7 @@ export default function Registration() {
                   18th — 20th June 2026
                 </p>
               </div>
+
               <div>
                 <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">
                   Venue
@@ -95,6 +114,7 @@ export default function Registration() {
                   Online · Global Virtual Access
                 </p>
               </div>
+
               <div>
                 <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">
                   Payment Info.
@@ -115,7 +135,7 @@ export default function Registration() {
             </div>
           </div>
 
-          {/* Right: Form */}
+          {/* RIGHT SIDE */}
           <div className="bg-white border p-8 flex flex-col gap-6">
             <h3
               className="font-display text-lg font-semibold text-[#1a2e24]"
