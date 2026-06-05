@@ -16,8 +16,7 @@ const hearAboutOptions = [
   { value: "Other" },
 ];
 
-
-  const FORM_ACTION =
+const FORM_ACTION =
   "https://docs.google.com/forms/d/e/1FAIpQLSc2x8IlIS0Fbblr4nVpWCTARIAFOayCeEXkBeqMoTOkT9PcTw/formResponse";
 
 export default function Registration() {
@@ -103,7 +102,7 @@ export default function Registration() {
                   Dates
                 </p>
                 <p className="text-white text-sm font-medium">
-                  18th — 20th June 2026
+                  26th — 27th June 2026
                 </p>
               </div>
 
@@ -114,6 +113,18 @@ export default function Registration() {
                 <p className="text-white text-sm font-medium">
                   Online · Global Virtual Access
                 </p>
+              </div>
+
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">
+                  Training investment
+                </p>
+                  <p className="tracking-[0.18em] text-gray-400 text-[11px] uppercase font-medium">
+                    Early birds - <span className="text-[#cc9f39]">$40</span>
+                  </p>
+                  <p className="tracking-[0.18em] text-gray-400 text-[11px] uppercase font-medium">
+                    General - <span className="text-[#cc9f39]">$55</span>
+                  </p>
               </div>
 
               {/* <div>
