@@ -15,14 +15,14 @@ const testimonials = [
   },
    {
     initials: "AK",
-    name: "Dr. Amara K.",
+    name: "Dr. Amara K2.",
     role: "School Owner (Kenya)",
     quote:
       "The financial strategies shared transformed how we run our school. It's no longer just a service; it's a high-performing enterprise.",
   },
    {
     initials: "AK",
-    name: "Dr. Amara K.",
+    name: "Dr. Amara K3.",
     role: "School Owner (Kenya)",
     quote:
       "The financial strategies shared transformed how we run our school. It's no longer just a service; it's a high-performing enterprise.",
