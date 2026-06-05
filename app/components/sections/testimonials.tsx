@@ -13,6 +13,20 @@ const testimonials = [
     quote:
       "The financial strategies shared transformed how we run our school. It's no longer just a service; it's a high-performing enterprise.",
   },
+   {
+    initials: "AK",
+    name: "Dr. Amara K.",
+    role: "School Owner (Kenya)",
+    quote:
+      "The financial strategies shared transformed how we run our school. It's no longer just a service; it's a high-performing enterprise.",
+  },
+   {
+    initials: "AK",
+    name: "Dr. Amara K.",
+    role: "School Owner (Kenya)",
+    quote:
+      "The financial strategies shared transformed how we run our school. It's no longer just a service; it's a high-performing enterprise.",
+  },
 ];
 
 export default function Testimonials() {

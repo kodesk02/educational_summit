@@ -71,12 +71,12 @@ export default function Hero() {
             >
               Register Now
             </Button>
-            <CountdownTimer targetDate="2026-06-18T09:00:00" />
+            <CountdownTimer targetDate="2026-06-26T09:00:00" />
           </div>
 
           {/* Meta tags */}
           <div className="flex flex-wrap gap-3 pt-2 ">
-            {["18th – 20th June 2026", "Online · Global Virtual Access"].map(
+            {["26th – 27th June 2026", "Online · Global Virtual Access"].map(
               (item) => (
                 <span
                   key={item}

@@ -115,13 +115,13 @@ export default function Registration() {
                 </p>
               </div>
 
-              <div>
+              {/* <div>
                 <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">
                   Payment Info.
                 </p>
                 <p className="text-white text-sm font-medium">1234456789</p>
                 <p className="text-white text-xs font-medium">Access Bank</p>
-              </div>
+              </div> */}
             </div>
 
             <div className="mt-auto pt-6 border-t border-summit-border/40">
