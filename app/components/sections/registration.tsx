@@ -16,8 +16,9 @@ const hearAboutOptions = [
   { value: "Other" },
 ];
 
-const FORM_ACTION =
-  "https://docs.google.com/forms/d/e/1FAIpQLSfrMP65WF_Jz9kK4GeMNOpDxh-1MavAUNPxro1YBIZc32liQA/formResponse";
+
+  const FORM_ACTION =
+  "https://docs.google.com/forms/d/e/1FAIpQLSc2x8IlIS0Fbblr4nVpWCTARIAFOayCeEXkBeqMoTOkT9PcTw/formResponse";
 
 export default function Registration() {
   const [form, setForm] = useState({
@@ -51,13 +52,13 @@ export default function Registration() {
       setLoading(true);
 
       const body = new URLSearchParams({
-        "entry.191638175": form.fullName,
-        "entry.320162868": form.email,
-        "entry.724159003": form.institution,
-        "entry.543450719": form.phone,
-        "entry.229453005": form.position,
-        "entry.1255953392": form.country,
-        "entry.1656985034": form.hearAbout,
+        "entry.1754132279": form.fullName,
+        "entry.1001087085": form.email,
+        "entry.83037970": form.institution,
+        "entry.1356646833": form.phone,
+        "entry.1727227217": form.position,
+        "entry.792703846": form.country,
+        "entry.2127074269": form.hearAbout,
       });
 
       await fetch(FORM_ACTION, {

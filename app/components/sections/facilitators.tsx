@@ -85,9 +85,9 @@ export default function Facilitator() {
         </div>
 
         {/* ================= SPEAKER 2 ================= */}
-        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 lg:gap-16 items-center mt-24">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center mt-24">
           {/* Content First */}
-          <div className="flex flex-col gap-8">
+          <div className="flex order-last md:order-first flex-col gap-8">
             <SectionHeading
               title="Building Educational Excellence"
               light={false}
@@ -130,7 +130,7 @@ export default function Facilitator() {
           </div>
 
           {/* Image */}
-          <div className="flex justify-center md:justify-end">
+          <div className="flex order-first md:order-last justify-center md:justify-end">
             <div className="relative w-full max-w-sm">
               <div className="absolute -top-4 -left-4 w-full h-full border border-[#cc9f39]/30 rounded-sm" />
 
