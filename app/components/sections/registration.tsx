@@ -133,6 +133,7 @@ export default function Registration() {
                 </p>
                 <p className="text-white text-sm font-medium">2048781095</p>
                 <p className="text-white text-xs font-medium">First Bank</p>
+                <p className="text-white text-xs font-medium">Graduate Learn Consult</p>
               </div>
             </div>
 
