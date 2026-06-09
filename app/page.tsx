@@ -6,6 +6,7 @@ import Hero from "./components/sections/heroSection";
 import Navbar from "./components/sections/navbar";
 import Registration from "./components/sections/registration";
 import StrategicTransformation from "./components/sections/strategicTransformation";
+import SummitSchedule from "./components/sections/summitSchedule";
 import Testimonials from "./components/sections/testimonials";
 import WhyAttend from "./components/sections/whyAttend";
 import WhatsAppButton from "./components/ui/whatsappButton";
@@ -20,6 +21,7 @@ export default function Home() {
       <Facilitator />
       <Testimonials />
       <StrategicTransformation />
+      <SummitSchedule/>
       <AfricaTicker />
       <Registration />
       <Footer />

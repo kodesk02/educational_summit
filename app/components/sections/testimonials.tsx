@@ -1,31 +1,24 @@
 const testimonials = [
   {
-    initials: "AO",
-    name: "Dr. Amara Okezie",
-    role: "Group Director",
+    initials: "KN",
+    name: "Klaudia Ndahangwapo",
+    role: "Preschool Owner, Namibia",
     quote:
-      "Attending Caleb's previous sessions was the turning point for my school group in Lagos. We finally stopped just 'surviving' and started scaling with intention.",
+      "I gained practical skills in visionary leadership, school financial management, and preventing financial leakages. This program has strengthened my capacity to lead and grow my school effectively.",
   },
   {
-    initials: "AK",
-    name: "Dr. Amara K.",
-    role: "School Owner (Kenya)",
+    initials: "AD",
+    name: "Mr. Ayodele Dairo",
+    role: "Mujid Height Primary School, Lagos, Nigeria",
     quote:
-      "The financial strategies shared transformed how we run our school. It's no longer just a service; it's a high-performing enterprise.",
+      "The CPD Certified Leadership Programme equipped me with practical and impactful strategies that have enhanced my effectiveness as a school leader. I highly recommend it to educators committed to excellence and sustainable growth.",
   },
-   {
-    initials: "AK",
-    name: "Dr. Amara K2.",
-    role: "School Owner (Kenya)",
+  {
+    initials: "FO",
+    name: "Mrs. Ojo Faith Freda",
+    role: "Founder, Royal Crest School, Lagos, Nigeria",
     quote:
-      "The financial strategies shared transformed how we run our school. It's no longer just a service; it's a high-performing enterprise.",
-  },
-   {
-    initials: "AK",
-    name: "Dr. Amara K3.",
-    role: "School Owner (Kenya)",
-    quote:
-      "The financial strategies shared transformed how we run our school. It's no longer just a service; it's a high-performing enterprise.",
+      "The programme taught me the power of systems-driven leadership, enabling me to build structures for sustainable school growth. A valuable experience for every school leader.",
   },
 ];
 
@@ -45,11 +38,16 @@ export default function Testimonials() {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {testimonials.map((t) => (
+        <div className="grid md:grid-cols-2 place-items-center gap-6">
+          {testimonials.map((t, index) => (
             <div
               key={t.name}
-              className="bg-white rounded-2xl border border-gray-200 p-8 flex flex-col justify-between gap-8"
+              className={`bg-white rounded-2xl border border-gray-200 p-8 flex flex-col justify-between gap-8
+        ${
+          testimonials.length % 2 !== 0 && index === testimonials.length - 1
+            ? "md:col-span-2 md:w-1/2"
+            : ""
+        }`}
             >
               {/* Quote mark + text */}
               <div className="flex flex-col gap-5">
