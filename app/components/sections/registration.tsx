@@ -135,6 +135,15 @@ export default function Registration() {
                 <p className="text-white text-xs font-medium">First Bank</p>
                 <p className="text-white text-xs font-medium">Graduate Learn Consult</p>
               </div>
+
+               <div>
+                <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 mb-1">
+                  Southern African Payment Info.
+                </p>
+                <p className="text-white text-sm font-medium">9020680131361</p>
+                <p className="text-white text-xs font-medium">UBA Zambia</p>
+                <p className="text-white text-xs font-medium">Susan muke </p>
+              </div>
             </div>
 
             <div className="mt-auto pt-6 border-t border-summit-border/40">
